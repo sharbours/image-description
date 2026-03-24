@@ -1,4 +1,4 @@
-# whatisthis.sh 📸🤖
+# image-describe.sh 📸🤖
 
 A lightweight Bash utility to bridge local files (or remote URLs) with a vision-capable Large Language Model (LLM) hosted via **Ollama**. 
 
