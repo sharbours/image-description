@@ -10,7 +10,7 @@ Requirements - Some reasonably recent version of Linux (Tested on Debian 13 Trix
 
 ## Features
 * **Vision Analysis:** Sends images to a remote or local Ollama instance for text descriptions.
-* **Remote URL Support:** Automatically detects URLs, downloads them to a temporary directory with a forged User-Agent, and cleans up after execution.
+* **Remote URL Support:** Automatically detects URLs, downloads them to a temporary directory, and cleans up after execution.
 * **Metadata Extraction:** Optional flag to display existing EXIF data (GPS and Timestamp).
 * **Metadata Tagging:** Optionally writes the AI-generated description back into the image's "Comment" or "ImageDescription" fields using ImageMagick.
 * **Agent-Friendly:** Clean output parsing using `grep -P` (no `jq` dependency required) for easy integration into LLM tool-calling.
@@ -19,8 +19,8 @@ Requirements - Some reasonably recent version of Linux (Tested on Debian 13 Trix
 ---
 
 ## Prerequisites
-* **Ollama:** A running instance with a vision model (e.g., `qwen3.5:0.8b`, `llava`, or `moondream`).
-* **Dependencies:** `curl`, `base64`, and **ImageMagick** (specifically `identify` and `mogrify` for metadata features).
+* **Ollama:** A running instance with a vision model (e.g., `qwen3.5:0.8b` (tested), `llava`, or `moondream`).
+* **Dependencies:** `curl`, `base64`, and optionally **ImageMagick** (specifically `identify` and `mogrify` for metadata features).
 * **Operating System:** Linux / macOS.
 
 ---
@@ -28,12 +28,12 @@ Requirements - Some reasonably recent version of Linux (Tested on Debian 13 Trix
 ## Installation
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/whatisthis.git](https://github.com/your-username/whatisthis.git)
-    cd whatisthis
+    git clone [https://github.com/sharbours/image-description.git](https://github.com/sharbours/imagedescription.git)
+    cd image-description
     ```
 2.  **Make the script executable:**
     ```bash
-    chmod +x whatisthis.sh
+    chmod +x image-describe.sh
     ```
 
 ---
@@ -42,4 +42,4 @@ Requirements - Some reasonably recent version of Linux (Tested on Debian 13 Trix
 
 ### Basic Analysis
 ```bash
-./whatisthis.sh -i 192.168.0.122 ./my_photo.jpg
+./image-describe.sh -i 192.168.0.123 ./my_photo.jpg
