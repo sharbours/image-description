@@ -4,6 +4,9 @@ A lightweight Bash utility to bridge local files (or remote URLs) with a vision-
 
 This script is designed for high-performance local home lab environments (Proxmox/Nvidia GPU clusters) and provides agentic "eyes" for automation workflows, such as OCR, residential security cams, image batch updates, or home automation. It can read files locally or from a provided URL (URLs are downloaded into /tmp and then cleaned up after the script exits). Response time is around 5 to 20 seconds with qwen3.5:0.8b hosted on a GTX1060. Theoretically, it 'should' work with Ollama on a CPU only host, but you may have to fiddle with the timeouts. My first use case is to automate detailed daily logs of security cam footage.
 
+New -f option "focus-on" allows the prompt to be interactively modified for follow up questions. Example:
+image-describe -f "the house architecture style" -i my-vision-server-ip-or-dns-name http://www.example.com/housepicture3.jpg
+
 Requirements - Some reasonably recent version of Linux or MacOS (Tested on Debian 13 Trixie). Imagemagick is optional if you want to be able to update the metadata on the images to include the description returned by Qwen.
 
 ---
