@@ -43,3 +43,4 @@ Requirements - Some reasonably recent version of Linux or MacOS (Tested on Debia
 ### Basic Analysis
 ```bash
 ./image-describe.sh -i 192.168.0.123 ./my_photo.jpg
+./image-describe.sh -i 192.168.0.123 http://www.website.us/photos/photo123.png
