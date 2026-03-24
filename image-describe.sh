@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# image-describe-enhanced.sh - Image analysis via Ollama Vision API
+# image-describe.sh - Image analysis via Ollama Vision API
 # Copyright (C) 2026 [S. Harbour - Silicon Forest]
 #
 # This program is free software: you can redistribute it and/or modify
@@ -19,7 +19,7 @@ SHOW_GPS=0
 IMAGE_INPUT=""
 IS_REMOTE=0
 
-# A standard, highly-accepted Windows/Chrome User-Agent to bypass basic bot-blocking
+# A standard Windows/Chrome User-Agent
 USER_AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
 
 # --- Functions ---
